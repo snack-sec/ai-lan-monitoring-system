@@ -73,7 +73,7 @@ Scenario: Server on Linux (Kali), Client on Windows
 cd python_server
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export ADMIN_API_KEY="A82CE4A67269D7AC52B1A9D695A49"
+export ADMIN_API_KEY="key"
 uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
 ```
 
@@ -88,7 +88,7 @@ pip install -r requirements.txt
 @"
 {
   "SERVER_URL": "http://<KALI_IP>:5000",
-  "ADMIN_API_KEY": "A82CE4A67269D7AC52B1A9D695A49"
+  "ADMIN_API_KEY": "key"
 }
 "@ | Set-Content -Encoding UTF8 "$env:APPDATA\agent_demo_config.json"
 

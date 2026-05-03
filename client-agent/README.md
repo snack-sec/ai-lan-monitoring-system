@@ -22,7 +22,7 @@ Safety note: This tool is for lab/testing only. Obtain explicit consent from use
 cd ../server/python_server
 python3 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
-export ADMIN_API_KEY="A82CE4A67269D7AC52B1A9D695A49"
+export ADMIN_API_KEY="key"
 uvicorn app.main:app --host 0.0.0.0 --port 5000 --reload
 # Note your Kali IP from: hostname -I
 ```
@@ -38,7 +38,7 @@ pip install -r requirements.txt
 @"
 {
   "SERVER_URL": "http://<KALI_IP>:5000",
-  "ADMIN_API_KEY": "A82CE4A67269D7AC52B1A9D695A49",
+  "ADMIN_API_KEY": "key",
   "POLL_INTERVAL": 5,
   "METRICS_INTERVAL": 30
 }
@@ -116,7 +116,7 @@ pip install -r requirements.txt
 @"
 {
   "SERVER_URL": "http://127.0.0.1:5000",
-  "ADMIN_API_KEY": "A82CE4A67269D7AC52B1A9D695A49",
+  "ADMIN_API_KEY": "key",
   "POLL_INTERVAL": 5,
   "METRICS_INTERVAL": 30
 }
